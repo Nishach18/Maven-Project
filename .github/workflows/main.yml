@@ -28,13 +28,13 @@ jobs:
       - name: create docker image and container
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USER_NAME1 }}
-          password: ${{ secrets.DOCKER_NAME1 }}
+          username: ${{ secrets.DOCKER_REPO1_USERNAME }}
+          password: ${{ secrets.DOCKER_REPO1_NAME }}
       - name: Build and push and check
         run: |
-          docker build -t nishachoudhary0909/cts:latest .
-          docker push nishachoudhary0909/cts:latest
+          docker build -t nishachoudhary0909/repo1:latest .
+          docker push nishachoudhary0909/repo1:latest
       - name: Docker container creation test
         run: |
-          docker run -dt --name c1 nishachoudhary0909/cts:latest
+          docker run -dt --name c1 nishachoudhary0909/repo1:latest
           docker ps
