@@ -36,5 +36,5 @@ jobs:
           docker push nishachoudhary0909/repo1:v1
       - name: Docker container creation test
         run: |
-          docker run -dt --name c1 nishachoudhary0909/repo1:latest
+          docker run -dt --name c1 nishachoudhary0909/repo1:v1
           docker ps
