@@ -32,8 +32,8 @@ jobs:
           password: ${{ secrets.DOCKER_REPO1_NAME }}
       - name: Build and push and check
         run: |
-          docker build -t nishachoudhary0909/repo1:latest .
-          docker push nishachoudhary0909/repo1:latest
+          docker build -t nishachoudhary0909/repo1:v1 .
+          docker push nishachoudhary0909/repo1:v1
       - name: Docker container creation test
         run: |
           docker run -dt --name c1 nishachoudhary0909/repo1:latest
