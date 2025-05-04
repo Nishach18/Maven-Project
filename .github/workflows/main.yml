@@ -30,7 +30,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
+      - name: Build and push and check
         run: |
           docker build -t nishachoudhary0909/cts:latest .
           docker push nishachoudhary0909/cts:latest
